@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Controlling the Page with Stories – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Controlling the Page with Stories</h1>		<p>You can show and hide layers as the user scrolls through a story layer by placing special markers in your text. These markers tell FutureFolio the name of the layer you want to show, and internally it uses a Show Single Layer effect (see <a href="creator.behaviours.showsinglelayer.html"> "Show Single Layer"</a>) so that only one hidden layer is shown at a time.</p>
+	<p>You can place as many markers in your text as you want; FutureFolio will automatically find the one nearest the top of the page and show it.</p>
+	<p>Here's an example of marker layers in action:</p>
+<pre>
+&lt;marker layer=&quot;layer1&quot; /&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed lorem magna.
+Quisque id lectus et ligula commodo vestibulum. Nulla id eros sed urna ornare lobortis.
+Vivamus tellus mauris, mollis in lobortis dignissim, vulputate quis leo. 
+&lt;marker layer=&quot;layer2&quot; /&gt;
+Duis pretium dapibus tristique. Etiam in mauris eu erat molestie convallis.
+Duis convallis porta nibh, ut iaculis enim venenatis vitae.
+Nullam ipsum leo, sodales et ornare id, dictum ac dui.
+&lt;marker layer=&quot;layer3&quot; /&gt;
+Vivamus sodales nisi quis odio rutrum id hendrerit metus dignissim.
+Cras vitae leo a lacus vestibulum dapibus. Maecenas posuere, est sed molestie
+ultricies, purus libero cursus neque, quis euismod orci magna vitae elit.</pre>
+	
+	<p>That example has three markers. As the reader scrolls down the page, first layer1 will be shown, then layer2, then layer3.</p>
+	
+	<p>This technique is commonly used for pages that have long-form reading – you can show images that illustrate what the user is reading about right now rather than clutter the page up with many images.</p>
+	<p>It can also be used to detect when the user has started reading a story. You can show any layer you want using this system, so if, for example, your story was a review of a game in the App Store, you could make a button appear saying "Buy this on the App Store!" as soon as the user scrolls the story slightly, on the basis that scrolling the story means they are probably reading it.</p>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.techniques.slideshowcontrol.html">&#9664; Controlling the Page with Slideshows, Animations and Boxes</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.techniques.html">Up: Advanced Techniques</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.techniques.affiliatelinks.html">Affiliate links &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

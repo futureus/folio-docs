@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Working with Physics – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Working with Physics</h1>		<p>One of the most "interesting" special effects in Folio is the creation of a physics engine. This is done by attaching the behaviour "Enable Physics" either to a rendition or to an image behaviour, and will cause all layers that have "Responds to Physics" enabled to respond as if your page had real-life physics.</p>
+	<p>The physics engine in FutureFolio is fairly simple: layers will fall to the bottom of the page by default, and will bounce off or rest on any other layers that they touch that are also enabled for physics.</p>
+	<p>If you want to create a physics force when the user taps on something, use the "Create Physics Force" behaviour and specify the strength of the physics force as the behaviour's parameter. This will have the effect of a "bomb" on the page - nearby objects will zoom away as they are pushed by your force.</p>
+	
+	<div class="caution">
+		<h2>Be careful with physics</h2>
+		<p>Please read the following provisos with physics:</p>
+		
+		<ul>
+			<li>Once enabled, physics can't be disabled for that page unless the user scrolls a couple of pages away and returns.</li>
+			<li>Physics will move any physics-enabled layers based on their gravity and other layers; if you try to animate these layers while they are moving, you will not get the effect you want. Do not try to animate or use tilt effects with physics-enabled objects once physics has been enabled for the page.</li>
+			<li>Two objects that are enabled for physics that start life overlapping on your page will exhibit strange behaviour as they resolve their overlap.</li>
+			<li>All objects use their layer frames (ie, the box you've drawn for them) as their collision shapes.</li>
+		</ul>
+	</div>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.techniques.dynamicmovement.tilt.html">&#9664; Reading the tilt sensor</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.techniques.dynamicmovement.html">Up: Dynamic movement</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.techniques.librarycover.html">Customising your Library Cover &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

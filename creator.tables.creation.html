@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Table Creation – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Table Creation</h1>		<p>To create a new table layer, click on the <strong>Add table</strong> button.</p>
+	<a name="creator.tables.creation.add"></a><div class="figure">
+		<h2>Adding a table</h2>
+		<img src="images/creator.tables.creation.add.png" />	</div>	<p>Data for each individual table is stored in its own file within your issue. These are created and managed by FutureFolio Creator via the table editor window.</p>
+	<p>Once you have created a new table layer, clicking on the <strong>layer settings</strong> button will bring up a dialog asking you how you want to configure your table - a new blank table ("Create blank table") or copied from another table in that issue ("Create from file").</p>
+	<p>If you choose to create a table from an existing one, you will be presented with a list of any table files found in that issue. Select the table you want to copy. FutureFolio Creator will copy the selected table to a new file and take you into the table editor where you can make any changes.</p>
+	<p>If you choose to create a blank template, Creator will take you directly into the table editor where you can set up your table from scratch.</p>
+	<div class="sidebar">
+		<h2>Tables from older issues</h2>
+		<p>If you create your issues by copying directly from an old issue, you may find that your list of existing tables is empty on first run. This is because the file format changed from .xml to a custom file type - .table - and the list is populated by .table files.</p>
+		<p>To migrate your old-style tables to the new format, simply open the table editor for each and click <strong>Save</strong>. You will then see them in the list.</p>
+		<p>Note that this migration to the new format is not compulsory and your old .xml files will still be displayed correctly.</p>
+	</div>	<p>If you choose to delete a table layer, Creator will ask you if you wish to delete the table's associated file. If you wish to use the table again later in the issue, choose "No". Otherwise, click "Yes" and the file will be deleted from your issue.</p>
+	<p>Note that table data files which you choose not to delete (and which are therefore no longer associated with a table layer), although remaining in your issue directory, will <em>not</em> be copied into your final built issue. This means that there are no negative side effects to not deleting them, other than cluttering your editing issue directory!</p>
+	<p>The data file associated with your table layer is shown across the top of the table editor window. You can change the data file which your table layer is associated with by clicking the <strong>File</strong> button. You will be presented with a list of the table files in that issue - select the file you want your table layer to use. If you select a different file to the one your table layer is currently using, Creator will ask you if you want to delete the file which the table used to reference. As before, select "No" if you want to use it again, and "Yes" if it is no longer needed.</p>
+	<div class="caution">
+		<h2>Shared table files</h2>
+		<p>Be careful when changing your table layer's associated data file. If you select a data file which is also referenced by another table layer in your issue, both table layers will then be referencing the same data file. This means that any changes you make to the table data will affect <em>both</em> table layers. It also means that if you choose to delete the table data file if and when one layer no longer needs it, the other layer which references that data file will be left without data and therefore be blank.</p>
+	</div>
+	<a name="creator.tables.creation.editor"></a><div class="figure">
+		<h2>An example table and its table editor window</h2>
+		<img src="images/creator.tables.creation.editor.png" />	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.tables.html">&#9664; Tables</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.tables.html">Up: Tables</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.tables.layout.html">Sections, Columns and Rows &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

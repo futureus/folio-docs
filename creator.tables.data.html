@@ -1,0 +1,67 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Data Entry – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Data Entry</h1>		<p>The most common form of data you will be entering into your table is plain text. To enter text, simply click in the relevant cell and type.</p>
+	<p>To set text in the section header for a column, tap on the header for the appropriate column to bring up the column settings menu (<a href="#creator.tables.customising.columnrowsection"> "Column, row and section header settings menus"</a>), and enter the text in the <strong>Title</strong> field.</p>
+	<p>You may want your table cells to display images rather than text. To achieve this, place your images into your issue folder and type the image filename into the appropriate cell, surrounded by square brackets, e.g. <strong>[myImage.png]</strong>. The image will be aligned to the left of the cell horizontally, and centre-aligned vertically. Any overspill will be clipped to the cell size. Note that images are not supported in section headers - only table cells.</p>
+	<p>When a table is initially displayed, the data is arranged in the same order in which it was entered by you. When the user taps on the section header for a column, the data in that section and column will be sorted alphabetically. Tapping again will reverse the sort.</p>
+	<p>Cells which contain image data will be included in the sort operation, using their filenames (including the square brackets) as the data by which to sort. With careful file naming, you can therefore use this feature to have a column containing e.g. star rating images which then sort correctly.</p>
+	<p>The last type of data which you can enter into cells is sortable dates. If you enter a date value as plain text, it will not necessarily sort in logical date order - alphabetical sorting will be applied to it. To achieve correct date sorting, a special formatting has been introduced:  <strong>&lt;yyyy.mm.dd.hh.mm.ss&gt;</strong>. This formatting (including the angle brackets) will be detected and resolved into a date by which to sort. It will then be displayed in a user-friendly manner (see <a href="#creator.tables.data.datesort"> "Date-formatted entries' display and sort"</a>).</p>
+	<p>The accepted forms of date entry are:</p>
+	<ul>
+		<li><strong>&lt;yyyy.mm.dd.hh.mm.ss&gt;</strong> - note that you only have to fill this out up to the desired point, e.g. <strong>&lt;2012.02&gt;</strong> is fine.</li>
+		<li><strong>&lt;Out now&gt;</strong></li>
+		<li><strong>&lt;TBC&gt;</strong></li>
+		<li><strong>&lt;N/A&gt;</strong></li>
+		<li><strong>&lt;Q1&gt;</strong>, <strong>&lt;Q2&gt;</strong> etc - Q represents "quarter".</li>
+		<li><strong>&lt;yyyy.Q1&gt;</strong>, <strong>&lt;yyyy.Q2&gt;</strong> etc.</li>
+		<li><strong>&lt;Spring&gt;</strong>, <strong>&lt;Summer&gt;</strong> etc - both <strong>"Autumn"</strong> and <strong>"Fall"</strong> are supported.</li>
+		<li><strong>&lt;yyyy.Spring&gt;</strong>, <strong>&lt;yyyy.Summer&gt;</strong> etc.</li>
+	</ul>
+	<p>The entries that involve words are not case sensitive, so <strong>&lt;OUT NOW&gt;</strong> is valid, as is <strong>&lt;out now&gt;</strong> and so on. When it comes to display the value, your casing will be respected.</p>
+	<p>When the sort operation is performed, the <strong>&lt;Out now&gt;</strong>, <strong>&lt;TBC&gt;</strong> and <strong>&lt;N/A&gt;</strong> entries will be interpreted as a date in the distant past, so that they appear logically in the sequence, e.g. Out now -> in 1 month -> in 2 months etc.</p>
+	<p>For the sort operation, the season and quarter entries are interpreted as the last day of that season or quarter - which evaluates to the following dates:</p>
+	<ul>
+		<li><strong>Q1</strong> - March 31st.</li>
+		<li><strong>Q2</strong> - June 30th.</li>
+		<li><strong>Q3</strong> - September 30th.</li>
+		<li><strong>Q4</strong> - December 31st.</li>
+		<li><strong>Spring</strong> - June 20th.</li>
+		<li><strong>Summer</strong> - Sept 21st.</li>
+		<li><strong>Autumn</strong> / <strong>Fall</strong> - December 20th.</li>
+		<li><strong>Winter</strong> - March 20th the following year (i.e. <strong>&lt;2012.Winter&gt;</strong> -> March 20th 2013).</li>
+	</ul>
+	<p>Where no years are supplied, the current year at the time the user is viewing it is assumed.</p>
+	<p>When it comes to displaying your date-formatted entries in the table, the angle brackets will be omitted; your casing will be used, and the following formatting applied:</p>
+	<ul>
+		<li><strong>&lt;2012.05.29.10.01.30&gt;</strong> - 10:01:30 29 May 2012.</li>
+		<li><strong>&lt;2012.05.29&gt;</strong> -> 29 May 2012</li>
+		<li><strong>&lt;Out Now&gt;</strong> -> Out Now</li>
+		<li><strong>&lt;TBC&gt;</strong> -> TBC</li>
+		<li><strong>&lt;N/A&gt;</strong> -> N/A</li>
+		<li><strong>&lt;Q1&gt;</strong> -> Q1</li>
+		<li><strong>&lt;2023.Q2&gt;</strong> -> Q2 2023</li>
+		<li><strong>&lt;Winter&gt;</strong> -> Winter</li>
+		<li><strong>&lt;2023.Winter&gt;</strong> -> Winter 2023</li>
+	</ul>
+	<a name="creator.tables.data.datesort"></a><div class="figure">
+		<h2>Date-formatted entries' display and sort</h2>
+		<img src="images/creator.tables.data.datesort.png" />	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.tables.layout.html">&#9664; Sections, Columns and Rows</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.tables.html">Up: Tables</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.tables.behaviour.html">Row Behaviours &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

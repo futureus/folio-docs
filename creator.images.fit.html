@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Fit vs Stretch – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Fit vs Stretch</h1>		<p>The <strong>Size</strong> button lets you choose the fit-mode of your image in the image layer.</p>
+	<p>Fit mode honours the aspect ratio of the source image(s). For each image, if the image layer is a different aspect ratio, the image will be displayed as large as possible while still maintaining the aspect ratio via letterboxing or pillarboxing.</p>
+	<p>Stretch mode forces the image to fill the image layer, disregarding the aspect ratio.</p>
+	<a name="creator.images.fit.compare"></a><div class="figure">
+		<h2>Fit mode, stretch mode</h2>
+		<img src="images/creator.images.fit.compare.png" />	</div>	<div class="sidebar">
+		<h2>Size mode combined with rotation and scale</h2>
+		<p>To effectively combine size mode changes with non-default rotation and scale settings, it is important to understand how they work together.</p>
+		<p>The first setting which is applied is the size mode - fit or stretch. So your image is sized within the image layer according to your fit / stretch setting before any rotation or scale is applied.</p>
+		<p>Lastly, the rotation and scale is applied in one transformation. This transformation is applied to the result of placing the image within the layer using the given size mode.</p>
+		<p>The figure below gives an example image which combines stretch mode, rotation and scale, bringing in each setting in turn.</p>
+		<a name="creator.images.fit.withtransforms"></a><div class="figure">
+			<h2>Stretch mode, with 45 degree rotation, with 50% scale</h2>
+			<img src="images/creator.images.fit.withtransforms.png" />		</div>	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.images.transforms.html">&#9664; Rotation and Scale</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.images.html">Up: Images</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.images.flip.html">Flip mode &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

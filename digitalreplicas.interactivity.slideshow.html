@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Showing a slideshow – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Showing a slideshow</h1>		<p>If you want to display a number of images without disturbing the flow and paging of the magazine by adding extra pages for each image you can use an interactive slideshow instead.</p>
+	<p>Image slideshows appear over the top of the issue. Users tap once to go back to the issue and they return to the page where they left off. Images are centered and resize to fit the device window. They also auto page with the standard Apple page dotting system (if there is more than one image) to display their progress through the issue.</p>
+	<p>Due to memory limitations of iPad and iPhone devices and their colour profile support, some strict guidelines need to be followed for image specification. They are as follows:</p>
+	
+	<ul>
+		<li>FutureFolio only supports PNG and JPG image file formats. JPG files need to use the <strong>.jpg</strong> extension.</li>
+		<li>Images must be exported in the RGB colour profile (8 Bit).</li>
+		<li>Use 72 DPI, you will get a more accurate representation of the size on the actual device as it is the native resolution of the device.</li>
+		<li>Limit your images to 2048 pixels in any direction, if the image is too large it may cause instability and slow loading times.</li>
+		<li>Name your files uniquely, these will live with your PDF pages and thumbnails. You can't share a filename.</li>
+		<li>For slideshows use the following naming convention: <strong>image-1.jpg</strong> replacing <strong>image</strong> with your unique name and the extension with your desired one. Name sequential pages in this fashion increasing the number, eg: <strong>myslide-1.jpg</strong>, <strong>myslide-2.jpg</strong>, <strong>myslide-3.jpg</strong>, etc.</li>
+	</ul>
+	
+	<div class="sidebar">
+	    <h2>Something to consider</h2>
+	    <p>Bear in mind that slideshows load the current, previous and next image all at once to create a seamless user experience when swiping, so limit your image sizes and compression where possible.</p>
+	</div>	
+	<p>Once you have your image/images exported, place them in your issue directory, then create a link box adding <strong>media://image-1.jpg</strong> as the url (replacing <strong>image</strong> with your unique name and the extension with your desired one). FutureFolio will work out how many files are in your slideshow automatically and if there is only one image it will just display that without pages.</p>
+	<p>You can automatically jump to a specific image inside the slideshow by entering an image file other than the <strong>-1.jpg</strong> filename, for example: <strong>media://image-5.jpg</strong>, this would jump to the 5th image in the slideshow. In theory you could create a number of buttons automatically jumping to various pages of the slideshow as an alternative navigation method.</p>
+				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="digitalreplicas.interactivity.pagejumping.html">&#9664; Page jumping</a></td>
+					<td width="33%" style="text-align: center;"><a href="digitalreplicas.interactivity.html">Up: Adding interactivity</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="digitalreplicas.interactivity.video.html">Playing video &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

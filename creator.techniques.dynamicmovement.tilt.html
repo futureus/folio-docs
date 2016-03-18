@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Reading the tilt sensor – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Reading the tilt sensor</h1>		<p>You can create some interesting page effects, not least faux depth, by enabling the device's accelerometer. This will read the user's movement of the device as they tilt it left, right, forwards and backwards, and send that movement data to your page so that layers are shifted to give the user a different perspective on the page.</p>
+	<p>To enable the accelerometer for a page, use the behaviour "Enable accelerometer" either as a rendition behaviour or an image behaviour and give it a number for its parameter. This number affects the speed that should be shifted as the user moves their device, and it defaults to 1. You can set large values (eg 10) to allow the user to reveal things by moving their device.</p>
+	<p>When the "Enable accelerometer" behaviour has been triggered, all layers on the current page that have Dynamic Movement enabled will respond to the user's tilting actions.</p>
+	<p>FutureFolio will move each object at varying speeds depending on their position on your page: objects at the back of the page will move slowest and objects at the front will move fastest.</p>
+	<p>Objects inside boxes will move inside the box, even if the box itself doesn't have dynamic movement enabled. The speed of each object is determined by the position of its parent box, and its position <em>inside</em> its parent box.</p>
+	
+	<div class="caution">
+		<h2>Be careful with the accelerometer</h2>
+		<p>Please read the following provisos with tilt behaviours:</p>
+		
+		<ul>
+			<li>Once enabled, the accelerometer can't be disabled for that page unless the user scrolls a couple of pages away and returns.</li>
+			<li>The accelerometer will move any dynamic movement layers; if you try to animate or use physics on these layers while they are moving, you will not get the effect you want. Do not try to animate or use physics with tilt-enabled objects once the accelerometer has been enabled for the page.</li>
+			<li>Only one page can have control over the accelerometer at a time. If you intend to have two adjacent pages that use the accelerometer, make sure you place an image on the page that allows the user to re-activate the accelerometer for whichever page they choose.</li>
+		</ul>
+	</div>
+	
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.techniques.dynamicmovement.html">&#9664; Dynamic movement</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.techniques.dynamicmovement.html">Up: Dynamic movement</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.techniques.dynamicmovement.physics.html">Working with Physics &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

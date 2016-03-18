@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Slideshow – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Slideshow</h1>		<p>The slideshow image layer type is a series of pictures which the user can manually swipe through.</p>
+	<p>Specify the images to display in the slideshow with the <strong>Filenames</strong> button (see <a href="creator.images.filenames.html"> "Importing Filenames"</a>).</p>
+	<p>If you wish, you can add additional image layers to show left and right arrows to indicate to the user that they can swipe to see more. If you have chosen to do this, you can enable a feature on the slideshow layer where Folio hides the left arrow when the first image is showing, and hides the right arrow when the last image is showing. To enable this feature, enter the left and right arrows' layer names into the <strong>Arrow layers</strong> dialog.</p>
+	<p>By default, the slideshow will scroll in a "paging" manner. As the user swipes and lets go, the slideshow will dock to the nearest unit, where the unit is defined to be the width of the slideshow layer. To change the scroll type to a smooth scroll, where the slideshow does <em>not</em> dock as the user lets go, change the <strong>Smooth scroll</strong> control to "OFF". You can also set this to hidden, this will use paged scrolling without the paging dots at the bottom of the slideshow.</p>
+	<p>The default paging unit for a slideshow is the width of the slideshow layer. You can change this using the <strong>Scroll %</strong> control. Entering a value of less than <strong>100</strong> will result in a smaller paging unit, so that the next image is partially visible at the edge. This can be useful to show the user that there is more content which they can scroll to see. If your image matches the aspect ratio of the slideshow layer, this will result in some image overlapping. However, if the image has a different aspect ratio and you choose the "Fit" option (see <a href="creator.images.fit.html"> "Fit vs Stretch"</a>), your images will be displayed to the size of the slideshow, but with the aspect ratio maintained, so you will have space either side of your image. This can be used in conjunction with the <strong>Scroll %</strong> control to give the results shown in <a href="#creator.images.slideshow.percent"> "Scroll percent in slideshows"</a>.</p>
+	<p>The figure below shows a slideshow which is the same width as the page. The images which make up the slideshow are half of that width. With a scroll percentage of <strong>100</strong>, the next image is not visible. At <strong>70</strong>, the next image can just be seen, <strong>60</strong> shows a large chunk of it, and <strong>50</strong> lines it up to the edge of the current issue, as in this example, the image width is exactly half the slideshow width.</p>
+	<a name="creator.images.slideshow.percent"></a><div class="figure">
+		<h2>Scroll percent in slideshows</h2>
+		<img src="images/creator.images.slideshow.percent.png" />	</div>	<p>When adding a file to a slideshow, the <strong>Add remote...</strong> button can be used to add a movie into the slideshow. To use this feature, enter the filename (for local movies) or URL (for streamed movies) of the required movie in the dialog that pops up.</p>
+	
+	<div class="sidebar">
+	    <h2>Naming conventions</h2>
+		<ul>
+			<li><strong>Simple</strong>			You can associate layers with each of the component images in a slideshow by naming them the same as the slideshow layer name, followed by a dash and a number. As the user swipes through the slideshow images, these specially named layers will be shown and hidden at the appropriate times.			For example, name your slideshow layer <strong>main</strong>, then create layers named <strong>main-1</strong>, <strong>main-2</strong> and so on, hiding each one except the one you start from (<strong>main-1</strong>). As you swipe through, <strong>main-1</strong> will be shown when the first image displays, <strong>main-2</strong> when the second image displays, and so on.			If you are using the behaviour "Download all streamed movies" in your issue, you may wish to supply a different URL to download any movies in your slideshow from. For example, you may wish to stream an SD version, but allow the user to download an HD version. To specify a separate download URL, enter it after your streamed URL, separated by a comma or pipe character <strong>|</strong>, when adding the movie to the slideshow.			E.g. <strong>http://streammoviefrom.mp4, http://downloadmoviefrom.mp4</strong> or <strong>http://streammoviefrom.mp4|http://downloadmoviefrom.mp4</strong>			Note that commas entered here will be converted to pipe characters as commas are already used to differentiate the slideshow items from one another.</li>
+			<li><strong>Advanced</strong>			You can extend the simple naming convention to show multiple layers for each slideshow image. Renaming our layers to <strong>main-1:5</strong>, <strong>main-2:4</strong> and <strong>main-6:10</strong> will now behave as follows. The layer <strong>main-1:5</strong> will be visible whilst the user swipes through slides 1 to 5, layer <strong>main-1:5</strong> and <strong>main-2:4</strong> will be visible for slideshow images 2 to 4, and <strong>main-6:10</strong> for layers 6 to 10.</li>
+		</ul>
+	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.images.filenames.html">&#9664; Importing Filenames</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.images.html">Up: Images</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.images.animation.html">Animation &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

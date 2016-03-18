@@ -1,0 +1,40 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Toggle Buttons – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Toggle Buttons</h1>		<p>Toggle buttons allow you to create behaviours similar to those of radio buttons, they can also be used to control other layers on the page through a simple naming convention.</p>
+	<p>In its most basic form, you can create a toggle button by adding two pictures under the filenames field on the toggle settings panel. The first image specified will be used to represent the unchecked state of the toggle button and the second for the checked state. A third image is optional, if specified this image will be used to show a highlighted state of the toggle button.</p>
+	<p>Toggle buttons can be further customised in the following ways:</p>
+	
+	<ol>
+		<li>Group name: by assigning a group name, e.g. "Group 1", toggle buttons within the same group will adopt the known behaviour of radio buttons. Only one toggle button within a group can be in the selected state at any one time, selecting one toggle button will deselect all the others in the same group.</li>
+		<li>Sound effect: specify the filename of a sound sound file with the file extension. This sound file will then be played every time a toggle button is selected. If the toggle button is not assigned to a group then the sound will play when the toggle button is both selected and deselected.</li>
+		<li>Initial state: this property dictates the state of the toggle button when it loads on the page. Setting this property to "ON" will show the image for the checked state of the toggle button. The default property is "OFF", if you leave all the toggle buttons within a group set to "OFF" Creator will automatically set the last toggle button in that group to "ON" when the page loads.</li>
+	</ol>
+	
+	<p>Using the naming convention "-on"</p>
+	<p>You can use toggle buttons to toggle the visibility of other layers on the page by naming layers accordingly. If we have a toggle button named "toggle-button" we can use the state of this toggle button to control the visibility of any other layer on the page named "toggle-button-on". Whenever "toggle-button" is selected "toggle-button-on" will be visible, deselecting "toggle-button" will hide "toggle-button-on". More complex situations can be created by combining this naming convention with the group name property, and nesting layers inside boxes etc.</p>
+	<p>When using the "-on" naming convention you must set the visibility of all the layers on the page named "layername-on" to hidden. The layer will then show according to the state of the toggle button.</p>
+	
+	<div class="caution">
+		<h2>Auto-show</h2>
+		<p>If you use the auto-show layer feature to show a layer that is related to a toggle button you will over-ride the toggle feature for that layer.</p>
+	</div>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.images.flip.html">&#9664; Flip mode</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.images.html">Up: Images</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.movies.html">Movies &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

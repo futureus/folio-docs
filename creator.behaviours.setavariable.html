@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Set a Variable – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Set a Variable</h1>		<p>This lets you set a named variable, either to a specific value (eg 5000 or "Hello"), to a relative value (eg +5000 or -1), or to a list of values (eg "Gears of War", "Halo" and "Mass Effect").</p>
+	<p>For example: score=5000 will set a variable called "score" to be 5000. If you then say score+5000, it will set score to be 10000 - FutureFolio will take its current value of 5000 and add another 5000 to it.</p>
+	<p>You can also specify negative values, eg score-5000, which will subtract 5000 from score.</p>
+	<p>If you wish to make lists of items, such as a wish list or shopping basket, then you can use + and - with text surrounded by quotes. For example, wishlist+"Gears of War" and wishlist+"Halo" will result in both those items being in the wishlist variable. If you use - followed by some text, eg shoppinglist="carrots", all instances of that text will be removed from the list.</p>
+	<p>When a variable is changed, any Story layers that use variables will be reloaded.</p>
+	<p>You can assign text to variables simply by typing it in. For example, if you ask the user to choose which games console they want to read about, you could store console=PS3 and check that value later.</p>
+	<p>If you intend to use your variables to print lists of items, you should know that your variable names can and indeed should be named in a way that means something to the user. That is, "Shopping List" is preferable as a variable name to "shoppinglist".</p>
+	<p>Parameter: the name of the variable to set, an equals sign, followed by either an absolute value (name=hello); alternatively, the name of the variable to set followed by a relative value (score+5000; score-5000).</p>
+	
+	<div class="caution">
+		<h2>Variables are shared</h2>
+		<p>Variables are accessible across all issues of your magazine, which is helpful because it means you can read data across issues, but does mean that issues can tread on each others' variables unless you are careful.</p>
+		<p>If you want to avoid accidentally treading on variables, put your issue number or some other unique code at the start of your variable names, eg 194Score.</p>
+	</div>
+					
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.behaviours.copyfile.html">&#9664; Copy a file to iTunes</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.behaviours.advanced.html">Up: Advanced behaviours</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.behaviours.setvariablesfromfile.html">Set Variables From File &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

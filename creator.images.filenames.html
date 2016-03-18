@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Importing Filenames – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Importing Filenames</h1>		<p>To specify the image(s) to display in the image layer, click on the <strong>Filenames</strong> button. This will bring up a menu listing any images already assigned to this layer.</p>
+	<p>If there are no files selected, a list of image files which are currently in your issue's directory in <strong>/Simulator/EditingIssues/</strong> will appear. Click on the image which you want to add, using the search bar to help locate it if necessary. If you already have an image or multiple images selected, to add another file, click on the <strong>Add file...</strong> button. This will bring up that same list.</p>
+	<p>To return to the list of assigned image files without adding a new one, click on the <strong>Edit slideshow</strong> button.</p>
+	<p>The ordering of images assigned to this image layer can be rearranged by dragging the <strong>Move</strong> icon on the right of the list.</p>
+	<p>Images can be removed from the image layer by clicking the red <strong>Delete</strong> button next to the assigned image in the list.</p>
+	<div class="sidebar">
+		<h2>Add remote</h2>
+		<p>The <strong>Add remote...</strong> button is used to add a remote movie to a slideshow. This feature only works with the Slideshow type and will be covered in <a href="creator.images.slideshow.html"> "Slideshow"</a>. Note that this functionality is for remote movies, <em>not</em> remote images.</p>
+	</div>	<p>For some image layer types, you may wish to import a sequence of images. In these cases, you should name your images by the same filename, but with a dash and sequential numbers at the end, e.g. <strong>file-1.jpg</strong>, <strong>file-2.jpg</strong> etc. Also supported is <strong>file-01.jpg</strong>, <strong>file-02.jpg</strong>. Note that all supported image formats may be sequenced in this way.</p>
+	<p>To import the full image sequence, select the first (ending in 1). If a sequence is detected, you will be asked if you wish to import the full sequence or just the selected image.</p>
+	<p>Supported file formats for image layers are:</p>
+	<ul>
+		<li>jpg</li>
+		<li>jpeg</li>
+		<li>png</li>
+		<li>mp4 (slideshow only)</li>
+		<li>mov (slideshow only)</li>
+		<li>m4v (slideshow only)</li>
+	</ul>
+	<div class="sidebar">
+		<h2>Retina</h2>
+		<p>In order for your images to look sharp on retina displays, two images are needed - the normal one and then a second one which is double the dimensions, named with the same name, but suffixed "@2x", e.g. <strong>myImage.jpg</strong> and <strong>myImage@2x.jpg</strong>. Retina displays will choose the larger image, while non-retina displays will show the smaller.</p>
+		<p>If the source image file you provide is large enough, Folio will create the double-sized (retina) version for you at build time - it will scale the source image down to double the required display size (or as large as it can without upscaling) and save this to the build directory as <strong>myImage@2x.jpg</strong>, then scale to the required display size and save this as <strong>myImage.jpg</strong>. Therefore, wherever possible, you should provide your images at a size at least double their required display size.</p>
+		<p>If you have @2x images in your issue directory for any reason, you should never specify them as the file to use in the image layer. Always specify the standard-sized image, and the correct image will then be chosen at runtime.</p>
+		<p>Note that for standard image layers, you do <em>not</em> need to provide the @2x image yourself - simply supply your source image at double the display size and Folio will do the work for you.</p>
+	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.images.html">&#9664; Images</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.images.html">Up: Images</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.images.slideshow.html">Slideshow &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

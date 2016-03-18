@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Sequences â€“ FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Sequences</h1>		<p>Animation sequences allow you to create animation chains that execute one after another, and are the best way to create complex animations where one movement should execute only if another has finished.</p>
+	<p>Animation sequences are created in two parts: naming animations and using the onFinish attribute for animations.</p>
+	<p>A named animation looks like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;2&quot; duration=&quot;3&quot; sequenceName=&quot;myanim&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; alpha=&quot;0&quot; /&gt;
+	&lt;/animation&gt;	
+	
+	&acirc;€&brvbar;more animations&acirc;€&brvbar;
+&lt;/animationBlock&gt;	</pre>
+	
+	<p>That animation will not be executed until something else in the same animation script tells it to run.</p>
+	
+	<div class="caution">
+		<h2>Sequenced animations won't auto-execute</h2>
+		<p>Do not give your animations a sequence name if you want them to run automatically. Any animation with a sequence name will not be executed until it is forced to execute by another animation in the same script.</p>
+	</div>
+	
+	<p>Execute a named animation is done by adding an <strong>onFinish</strong> attribute to an animation, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;1&quot; duration=&quot;1&quot; onFinish=&quot;myanim&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; scale=&quot;2&quot; /&gt;
+	&lt;/animation&gt;		
+	
+	&lt;animation delay=&quot;2&quot; duration=&quot;3&quot; sequenceName=&quot;myanim&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; alpha=&quot;0&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	
+	<p>You can trigger multiple animations using <strong>onFinish</strong>, either by specifying multiple sequence names separated by commas (eg, <strong>onFinish="a, b, c"</strong>) or by giving more than one animation the same sequence name. For example, if you use <strong>onFinish="myanim"</strong> and there are two animations named "myanim", both will be executed.</p>
+	<p>Delays in animation sequences are based on the time they were started, rather than the time the whole animation script started. As a result, the above animation script will execute like this:</p>
+	
+	<ol>
+		<li>After one second, make Picture1 scale up to 2x its size over a period of one second.</li>
+		<li>When that has finished, wait a further two seconds, make Picture1 fade out over a period of three seconds.</li>
+	</ol>
+	
+	<p>Although you could do that without sequences, using them guarantees you precise timing.</p>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.animation.anchorpoints.html">&#9664; Anchor Points</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.animation.html">Up: Animation</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.optimising.html">Optimising your Issue &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

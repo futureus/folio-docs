@@ -1,0 +1,92 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Examples – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Examples</h1>		<p>A basic animation, to make a layer called Picture1 fade out over three seconds, looks like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; alpha=&quot;0&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	
+	<p>You could make it scale up as it fades out by adding a scale change, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; alpha=&quot;0&quot; scale=&quot;3&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	<p>Movement can be specified either as an absolute value, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;1&quot; duration=&quot;1&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; x=&quot;250&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	<p>Or as a relative value, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;1&quot; duration=&quot;1&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; x=&quot;-75&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+		
+	<p>You can add multiple layer movements inside the same animation block, such as making one layer fade out and scale up while another fades in and scales down, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; alpha=&quot;0&quot; scale=&quot;3&quot; /&gt;
+		&lt;layer name=&quot;Picture2&quot; alpha=&quot;1&quot; scale=&quot;1&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	<p>Alternatively, if you want to affect multiple layers in the same way, just separate their names with commas, like this:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture1, Picture2&quot; alpha=&quot;0&quot; scale=&quot;3&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	<p>If animations should be executed together, include them all in the same animation block. This animation will fade out and scale up Picture2 over three seconds, while also waiting two seconds and making Picture2 spin 180 degrees:</p>
+	
+	<pre>
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture2&quot; alpha=&quot;0&quot; scale=&quot;3&quot; /&gt;
+	&lt;/animation&gt;
+	
+	&lt;animation delay=&quot;2&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture2&quot; angle=&quot;180&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	
+	
+	<p>It is important that you understand that these two animations will execute in parallel: the second one will begin while the first is still happening. The delay on the second animation is from the beginning of the animation script, rather than from the end of the first animation. If you want to have one animation wait for another to complete, see <a href="creator.animation.sequences.html"> "Sequences"</a>.</p>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.animation.format.curves.html">&#9664; Curves</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.animation.html">Up: Animation</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.animation.preruns.html">Pre-runs &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

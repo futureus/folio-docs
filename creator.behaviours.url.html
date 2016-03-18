@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Load a URL internally / externally – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Load a URL internally / externally</h1>		<p>Use these behaviours to link the user to a web page by providing the URL as a parameter. An internal URL loads the web page over the existing issue, and the user returns to your app by tapping Close. An external URL will quit your app and fire up the device's web browser. Before external links are opened, the user will automatically be prompted whether they want to open the link.</p>
+	<p>If you wish to direct the user to an app on the App Store, use an external URL - FutureFolio will detect the App Store URL, prompt the user correctly, then launch the App Store directly.</p>
+	<p>Internal links allow you to customise the bar at the top of the internal browser window. This is done by entering certain keywords before the URL in the parameter field. The keywords (listed below) must appear <em>before</em> the URL and must be comma separated - e.g. safari, title, http://www.google.com
+	<ul>
+		<li><strong>safari</strong> - Show the <strong>Open in Safari</strong> button</li>
+		<li><strong>back</strong> - Show the <strong>Back</strong> button</li>
+		<li><strong>forward</strong> - Show the <strong>Forward</strong> button</li>
+		<li><strong>refresh</strong> - Show the <strong>Refresh</strong> button</li>
+		<li><strong>title</strong> - Show the browser title</li>
+		<li><strong>space</strong> - Separates left items from right items (see below)</li>
+	</ul>
+</p>
+	<p>Any toolbar items specified before "<strong>title</strong>" or "<strong>space</strong>" will be displayed (in the specified order) on the left side of the toolbar. Any items specified after either of these two keywords will be displayed on the right of the toolbar. See examples below.</p>
+	<a name="creator.behaviours.url.toolbarbackforwardtitlerefresh"></a><div class="figure">
+		<h2>Parameter of: back, forward, title, refresh, http://www.google.com</h2>
+		<img src="images/creator.behaviours.url.toolbarbackforwardtitlerefresh.png" />	</div>	<a name="creator.behaviours.url.toolbarsafarispacerefresh"></a><div class="figure">
+		<h2>Parameter of: safari, space, refresh, http://www.google.com</h2>
+		<img src="images/creator.behaviours.url.toolbarsafarispacerefresh.png" />	</div>	<p>		<div class="caution">
+			<h2>URL format</h2>
+			<p>URLs must include the http:// or https:// portion</p>
+		</div>
+	</p>
+	<p>Parameter: the URL of the website to load, including keywords where relevant.</p>
+					
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.behaviours.jumptosection.html">&#9664; Jump To Section</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.behaviours.basic.html">Up: Basic behaviours</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.behaviours.playasound.html">Play a Sound (Solo) &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

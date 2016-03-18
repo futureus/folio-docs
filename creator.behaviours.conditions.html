@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Conditions – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Conditions</h1>		<p>All image and rendition behaviours can have conditions attached to them that restrict when they can be run. By default, no conditions are applied, which means that your behaviour will always be run. To attach conditions to a behaviour, tap the settings icon next to the behaviour.</p>
+	<p>If you have attached one or more conditions to a behaviour, all of them must be true in order for the behaviour to run.</p>
+	
+	<p>To get started, click "Add…". Each condition is made up of three parts: a variable name, a check type, and a value.</p>
+	
+	<ul>
+		<li>equals - This is true if the variable is exactly equal to the value. This can be used for numbers (eg score = 4000) or text (eg console = ps3).</li>
+		<li>does not equal - This is true if the variable is not equal to the value. This can be used for numbers or text.</li>
+		<li>is greater than - This is true if the variable is greater than (but not equal to) the value. This can be used for numbers only.</li>
+		<li>is greater than or equal to - This is true if the variable is greater than or equal to the value. This can be used for numbers only.</li>
+		<li>is less than - This is true if the variable is less than (but not equal to) the value. This can be used for numbers only.</li>
+		<li>is less than or equal to - This is true if the variable is less than or equal to the value. This can be used for numbers only.</li>
+		<li>overlaps layer - This is true if the layer name specified under "variable" overlaps the layer name specified under "value" on your page. This can be used with layer names only, and only affects visible layers.</li>
+	</ul>
+	
+	<div class="sidebar">
+	    <h2>Advanced layer overlaps</h2>
+	    <p>When working with the "overlaps layer" condition, you can specify both the variable and value as comma-separated lists of layer names, and if any of those layers overlap then the condition is true. For example, specifying "alien1, alien2, alien3" as the variable and "human1, human2, human3" as the value will evaluate to be true if any alien overlaps any human.</p>
+		<p>Additionally, if multiple layers have the same name, all of them will be checked for collision.</p>
+	</div>		
+	
+				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.behaviours.downloadallstreamedmovies.html">&#9664; Download All Streamed Movies</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.behaviours.advanced.html">Up: Advanced behaviours</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.behaviours.timing.html">Timing &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

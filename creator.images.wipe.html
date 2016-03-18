@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Wipe – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Wipe</h1>		<p>Wipe image layers have a top image and a bottom image. As the user drags their finger across the image, the top image is hidden up to the point of their finger, revealing the bottom image below.</p>
+	<p>Use the <strong>Filenames</strong> button to specify the top image first, then the bottom image (see <a href="creator.images.filenames.html"> "Importing Filenames"</a>).</p>
+	<p>In the example wipe layer shown (<a href="#creator.images.wipe.direction"> "Wipe direction: right, left, top, bottom"</a>), the top image is the one with the processing effect, while the bottom image is the plain photo with the word "Original on".</p>
+	<p>You can enter the direction which the image wipes in with the <strong>Direction</strong> control. The example shows each of the direction options. Clockwise from top left, these are: <strong>right</strong>, <strong>left</strong>, <strong>top</strong>, <strong>bottom</strong>.</p>
+	<a name="creator.images.wipe.direction"></a><div class="figure">
+		<h2>Wipe direction: right, left, top, bottom</h2>
+		<img src="images/creator.images.wipe.direction.png" />	</div>	<p>You can set an initial start position for the image wipe by appending a percentage after the direction, for example <strong>left 25%</strong>.</p>
+	<p>You can choose to show the image wipe as-is, or with a divider image marking out where the top image extends to. To specify an image to use as a divider, enter the image name (including the file extension) in the <strong>Divider image</strong> field.</p>
+	<p>Note that the divider image is displayed at exactly the size of the source image, rather than stretching to fit the image wipe. This is so that the divider can overhang the edges of the image, if required. This means that you must tailor its size and orientation for the display size of the image wipe you want to use it on.</p>
+	<a name="creator.images.wipe.divider"></a><div class="figure">
+		<h2>Wipe with divider</h2>
+		<img src="images/creator.images.wipe.divider.png" />	</div>	<div class="sidebar">
+		<h2>Retina divider images</h2>
+		<p>When using divider images, you must manually provide retina versions. The build process creates retina images when you provide a source image which is at least double the size you want it to be displayed at. However, divider images are displayed at the source image size to allow for overhang, as described above. So if you provided a double-sized source image, your divider would simply be displayed at that size. So you will need to provide two copies of your divider images - one at the required size and one at double the size, named with the suffix "@2x", e.g. <strong>myDividerImage.png</strong> and <strong>myDividerImage@2x.png</strong>. Place these inside your issue directory as normal, and FutureFolio will select the appropriate one when displaying your divider to the user.</p>
+		<p>If you do not provide retina versions of your divider images, they will simply look low-res on retina displays.</p>
+	</div>	<p>The final setting for image wipes is the <strong>Divider fades</strong> toggle. This is only used when a divider image has been specified. When the toggle is set to "ON", the divider will be visible only while the user actively wipes the image. When they let go, the divider fades out.</p>
+				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.images.zoom.html">&#9664; Zoom</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.images.html">Up: Images</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.images.carousel.html">Carousel &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

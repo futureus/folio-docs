@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Importing Text – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Importing Text</h1>		
+	<p>As seen in <a href="creator.stories.html-css.html"> "HTML and CSS"</a>, story layers can be populated directly by simply typing in the text content in the story editor. This may well be sufficient for short, or static pieces of text. However, when dealing with content that has been commissioned from elsewhere, or content that will change from issue to issue, there are a couple of other ways by which text can be flowed into story layers.</p>
+	
+	<a name="creator.stories.importing-text.bodycopy.image"></a><div class="figure">
+		<h2>Import body copy</h2>
+		<img src="images/creator.stories.importing-text.bodycopy.png" />	</div>	
+	<a name="creator.stories.importing-text.link.image"></a><div class="figure">
+		<h2>Add source file</h2>
+		<img src="images/creator.stories.importing-text.link.png" />	</div>	
+	<p>The first way is to flow in text from an external file inside the issue directory. Click on the <strong>Import body copy...</strong> button to bring up a list of all suitable text files within the issue and select the one you need, as illustrated in <a href="#creator.stories.importing-text.bodycopy.image"> "Import body copy"</a>. This is essentially the same as opening the external file, and copying its content into the story editor and pressing save; subsequent changes to the content of the external file will not be reflected in the contents of the story layer.</p>
+	
+	<p>The second way is to <em>link</em> the story layer to an external source file. The effect of this is that if the external file's content changes, this will be reflected in the story layer. This is a very powerful feature for pages where the layout remains fixed, but the content changes between issue to issue. See <a href="#creator.stories.importing-text.link.image"> "Add source file"</a></p>
+	<div class="sidebar">
+	    <h2>Variables as source files</h2>
+	    <p>If you want to write the contents of a variable into your story box, specify the name of the variable in the Source File box, prefixed with a dollar sign. For example, to have the Score variable printed out, you would use $Score.</p>
+		<p>If you specify multiple variable names, separated by a comma, FutureFolio will automatically print both the name of the variable and its value, which makes it very easy to create shopping lists.</p>
+		<p>If you intend to use multiple variable names, you should be prepared to name your variables in a way that will be shown to users (eg "Meat and Dairy" rather than "meat_and_dairy"), and you should use the CSS styles p.FolioVariableName and p.FolioVariableValue to style the output.</p>
+	</div>				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.stories.html-css.html">&#9664; HTML and CSS</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.stories.html">Up: Stories</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.stories.styling.html">Styling &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

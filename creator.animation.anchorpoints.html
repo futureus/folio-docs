@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Anchor Points – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Anchor Points</h1>		<p>By default, animations are anchored to their centre, so rotation (for example) will spin the object around its centre. This is fine for most purposes, but for advanced animations you might want to have a layer animate around a different point.</p>
+	<p>If you want to modify an animation's anchor point, please read the following:</p>
+	
+	<ul>
+		<li>The anchor point of a layer can only be changed inside an animation pre-run, and only once.</li>
+		<li>This means you should set it to the value you want using a rendition behaviour, then not touch it again.</li>
+		<li>Anchor points are specified as a value relative to the size of the layer: an X value of 0 means the left edge of the layer, an X value of 1 means the right edge of the layer, a Y value of 0 means the top of the layer, and a Y value of 1 means the bottom of the layer.</li>
+		<li>These relative points are used so that you don't have to worry about any scaling that has been applied to the layer: 0 and 1 refer to the edges of the layer regardless of whether it has been scaled.</li>
+		
+		<li>You can use values beyond 0 and 1, and these allow you to rotate your layer from a more distant point. For example, rotating a layer that had an X anchor point of -10 would look like the layer was attached to a large wheel.</li>
+	</ul>
+	
+	<p>In the following example, the anchor point of the Picture1 layer is set to its top-left corner, then the layer is scaled up to 3x its normal size:</p>
+		
+	<pre>
+		
+&lt;animationBlock&gt;
+	&lt;animation delay=&quot;0&quot; duration=&quot;0&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; anchorX=&quot;0&quot; anchorY=&quot;0&quot; /&gt;	
+	&lt;/animation&gt;
+	
+	&lt;animation delay=&quot;1&quot; duration=&quot;3&quot;&gt;
+		&lt;layer name=&quot;Picture1&quot; scale=&quot;3&quot; /&gt;
+	&lt;/animation&gt;	
+&lt;/animationBlock&gt;	</pre>
+	 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.animation.preruns.html">&#9664; Pre-runs</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.animation.html">Up: Animation</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.animation.sequences.html">Sequences &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

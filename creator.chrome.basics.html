@@ -1,0 +1,168 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Creating your chrome – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Creating your chrome</h1>		
+	<p>Upon creating a blank issue, FutureFolio will automatically generate a <strong>chrome.xml</strong> file. By default this chrome will load the standard built in chrome that presents a simple constant top bar with a <strong>Close</strong> button.</p>
+	<p>To customise your chrome you will need to open the <strong>chrome.xml</strong> file in your preferred text editor and change the code.</p>
+	<p>All chrome files star and end with <strong>chrome</strong> tags, like so:</p>
+	
+	<pre>
+&lt;chrome&gt;	
+	// Your chrome tags here
+&lt;/chrome&gt;</pre>
+	
+	<p>Inside the <strong>chrome</strong> tag there are two things you can set:</p>
+	
+	<ol>
+		<li>default - if set to true, ie default="true", and you have created no chrome bars, this will place a dummy chrome on your page to help you test your magazine without first having to design a chrome.</li>
+		<li>dimAmount - set this to a value between 0 and 1 to control the amount the page should be dimmed when the chrome is opened, where 0 is no dimming at all (the page remains active) and 1 will black out your page entirely.</li>
+	</ol>
+	
+	<p>Inside your <strong>chrome</strong> tags you need to create <strong>bar</strong> tags, these will equate to a physical bar that will display in your document.</p>
+	<p><strong>bar</strong> tags have several attributes, some of these are required so that your issue knows where to display your bar and how. Here's a full list:</p>
+	
+	<ul>
+		<li>name (required) - This is the unique name of your bar, you can use spaces, but no special characters.</li>
+		<li>xoff (required) - This is the default x (horizontal) position of your bar when it is off (default, unless initialState is set).</li>
+		<li>yoff (required) - Like xoff, this is the initial y (vertical) position of your bar when the bar is off.</li>
+		<li>xon (required) - When your bar is on, this is the x position where your bar will animate to, if you have initialState set to <strong>on</strong>, then the bar will automatically be set to this.</li>
+		<li>yon (required) - Just like xon, this represents the y position that the chrome needs to animate to when it is activated.</li>
+		<li>width (required) - You need to set the size of your bar, if it's full screen you will need to set this value to the full width of the device. Some titles will use multiple bars that slide in, this is why you need to set the size of each bar.</li>
+		<li>height (required) - Same with the width attribute, this either needs to be the exact height you want the bar to be or the full device size.</li>
+		<li>swipeEnabled - This feature adds up and down swiping to toggle the bar. The user has to be swiping within the on or off area of your bar for the effect to occur, if the entire bar is off the screen this will not work. To enable this, set it to <strong>y</strong>. <em>To disable this, just do not add the attribute (if this item is set, the app will class it as a <strong>y</strong>).</em></li>
+		<li>background (required) - Each bar needs a background image, if you want to handle the imagery with your internal buttons and images, then you may wish to set this as a transparent png file.</li>
+		<li>alphaOff - For a fading bar, you will need to set this value, it's the off state visibility. This requires a number between zero and one, you can use decimal places for mid points, zero being invisible and one being fully visible (so <strong>0.5</strong> would be 50% visible). ideally you'll want to set this as <strong>0</strong> (invisible).</li>
+		<li>alphaOn - If you've set alphaOff, you'll need an on state, this is what the bar will animate to when the bar is toggled on. It uses the same values as alphaOff</li>
+		<li>shouldScroll - If you want your bar to be scrollable, in other words you want to have items in your bar that go further down than the height of your bar, then set this option to <strong>y</strong>. <em>To disable this, just do not add the attribute (if this item is set, the app will class it as a <strong>y</strong>).</em></li>
+		<li>scrollColour - You can change the scroll indicator colour if you want it to be a different colour than the default black one. This ideal for dark coloured chromes. The options are: <strong>white</strong> or <strong>none</strong> (For a black indicator, just omit this attribute).</li>
+		<li>initialState - If you want your bar item on by default, you need to set this attribute to <strong>on</strong>. You can either omit this or set it to <strong>off</strong> if you do not want to have the bar on by default.</li>
+		<li>appearSound - When activated the bar will play the sound provided. Please note that you can only play audio files in the wav, caf, mp3, aif and aiff file format.</li>
+		<li>disappearSound - If the user closes the bar, this sound will play.</li>
+	</ul>
+	
+	<div class="sidebar">
+	    <h2>Remember to include your image files in your issue's directory</h2>
+	    <p>All images referenced in your chrome need to exist in your issue directory, just like any other image you may use in your issue.</p>
+	</div>	
+	<p>Here's an example of a bar in action.</p>
+	
+	<pre>
+&lt;chrome&gt;	
+	&lt;bar name=&quot;top chrome bar&quot; xoff=&quot;0&quot; yoff=&quot;-150&quot; xon=&quot;0&quot; yon=&quot;0&quot; width=&quot;768&quot; height=&quot;200&quot; swipeEnabled=&quot;y&quot; background=&quot;top_chrome_bar.png&quot;&gt;
+		// items in your bar here
+	&lt;/bar&gt;
+&lt;/chrome&gt;</pre>
+	
+	<p>As you can see, this is a top bar that start 150 points above the top of the screen, showing the bottom 50 points on the screen (here we could display a toggle button). When the bar is on, it moves to the zero y position, showing the full bar.</p>
+	<p>Inside a bar you have three item types you can add, they are:</p>
+	
+	<ul>
+		<li>togglebutton - These are special buttons that toggle the entire chrome. This is essential if you haven't set the initialState attribute of your bar to <strong>on</strong>.</li>
+		<li>button - The bread and butter of every chrome are the buttons, they activate the various functions in your chrome, from jumping to pages, sections or even sharing text on social networking services.</li>
+		<li>scrubber - A scrubber is a visual navigation device, it's a scrollable area that contains thumbnails of each page. Tapping on a page thumbnail jumps to that page.</li>
+	</ul>
+	
+	<p>All these bar items share some common attributes, they are: x, y, width and height.</p>
+	<p>The Scrubber has two unique attributes:</p>
+	
+	<ul>
+		<li>padding - this sets the number of points of padding each page thumbnail image has on each side of it.</li>
+		<li>centrePages - if this attribute is set or set to "y" it will place the current page in the middle of the scrubber bar, not at the far left (default).</li>
+	</ul>
+	
+	<p>Here's an example of a scrubber bar item in action.</p>
+	
+	<pre>
+&lt;chrome&gt;	
+	&lt;bar name=&quot;top chrome bar&quot; xoff=&quot;0&quot; yoff=&quot;-150&quot; xon=&quot;0&quot; yon=&quot;0&quot; width=&quot;768&quot; height=&quot;200&quot; swipeEnabled=&quot;y&quot; background=&quot;top_chrome_bar.png&quot;&gt;
+		&lt;scrubber x=&quot;20&quot; y=&quot;40&quot; width=&quot;728&quot; height=&quot;80&quot; padding=&quot;4&quot; centrePages=&quot;y&quot; /&gt;
+			
+		// other items in your bar here
+	&lt;/bar&gt;
+&lt;/chrome&gt;</pre>
+	
+	<p>The above creates a centralised scrubber bar that is 40 points down from the top of the bar and stops 20 points from the left and right.</p>
+	<p>Togglebutton and button items share two attributes that other items do not have:</p>
+	
+	<ul>
+		<li>x - this is the horizontal position relative to the top left corner of the bar the item is nested in. So to place an item 80 points in on a screen while in a bar that's 40 points in, you only need to set it's x value to 40 and the bar is already 40 points in from the left.</li>
+		<li>y - again like x, only this is the vertical position on the item relative to the top of the bar it is nested in.</li>
+		<li>up - both button and toggleButton items act like generic interface buttons. The "up" state is the buttons initial state or unselected state. Enter the name of the image file for your button as this attribute.</li>
+		<li>down - when selected or tapped, this is the image state that the button will change to. This needs to be a separate button image if you want it to change on selection. This attribute is optional, you do not require an image for the down state.</li>
+	</ul>
+	
+	<p>With togglebuttons, the up and down attributes can have multiple image filenames separated by a colon (<strong>,</strong>) character. The image will change based on the section number that you are in.</p>
+	<p>You can provide a fully transparent PNG image file if you want a tappable region without an image. This can be useful if you want to hide your chrome completely when it is turned off but still enable the user to activate the chrome.</p>
+	<p>Let's see togglebutton items in action.</p>
+	
+	<pre>
+&lt;chrome&gt;	
+	&lt;bar name=&quot;top chrome bar&quot; xoff=&quot;0&quot; yoff=&quot;-150&quot; xon=&quot;0&quot; yon=&quot;0&quot; width=&quot;768&quot; height=&quot;200&quot; swipeEnabled=&quot;y&quot; background=&quot;top_chrome_bar.png&quot;&gt;
+		&lt;togglebutton x=&quot;0&quot; y=&quot;150&quot; width=&quot;768&quot; height=&quot;50&quot; up=&quot;open_arrow.png&quot; down=&quot;close_arrow.png&quot; /&gt;
+		&lt;scrubber x=&quot;20&quot; y=&quot;40&quot; width=&quot;728&quot; height=&quot;80&quot; padding=&quot;4&quot; centrePages=&quot;y&quot; /&gt;
+			
+		// other items in your bar here
+	&lt;/bar&gt;
+&lt;/chrome&gt;</pre>
+	
+	<p>In the example, the togglebutton item is always tappable, it's in the bottom 50 points of the top bar.</p>
+	<p>Regular buttons have further attributes that can be utilised in your chrome. They are the most versatile items in a chrome and can perform many tasks from jumping to a page to closing the entire issue.</p>
+	<p>Standard button items can have the following attributes:</p>
+	
+	<ul>
+		<li>pageSection - this is similar to how the togglebutton item handles section image changes. You can set this attribute to the name of a section, when the user is in this section the button will switch to it's (selected) down status.</li>
+		<li>tapEffectType - You can set your button to use a tap effect, a list of these effects are below.</li>
+		<li>tapEffectData - In most cases this is optional, it is only required if your tap effect needs a value, some data or a command.</li>
+		<li>sound - When tapped the button will play the sound provided. Please note that you can only play audio files in the wav, caf, mp3, aif and aiff file format.</li>
+	</ul>
+	
+	<p>Here is a list of available tap effects and the data required (if applicable) for each one:</p>
+	
+	<ul>
+		<li>TAP_JUMPTOSECTION - This jumps the user to the section entered in your tapEffectData attribute.</li>
+		<li>TAP_JUMPTOPAGE - Like jump to section, this jumps the user to a specified page name in your tapEffectData attribute.</li>
+		<li>TAP_PREVIOUSPAGE - Just like an internet browser's Back button, this sends the user to the last page they were on.</li>
+		<li>TAP_NEXTPAGE - Just like an internet browser's Forward button, this sends the user to the last page they jumped backwards from, almost like an undo for the previous page feature above.</li>
+		<li>TAP_TOC - Opens a searchable table of contents from this button. The user can filter down the pages or scroll through the whole issue.</li>
+		<li>TAP_CLOSEISSUE - Closes the issue and returns to the main container app. In FutureFolio Creator it will close the test.</li>
+		<li>TAP_INCREASEFONT - Any live text (not images) will increase in font size. This is global for the entire container app. Please bear this in mind.</li>
+		<li>TAP_DECREASEFONT - You will need this if you wish to enable increase font size, it enables the use to shrink the live text inside your issue.</li>
+		<li>TAP_RESETFONT - Sets the font size back to it's default.</li>
+		<li>TAP_SHAREOPTIONS - Opens a pop over containing any of the three sharing options available in app. You need to set the tapEffectData to any of the following, comma separated for multiple selections, you can have; facebook, twitter or email.</li>
+		<li>TAP_EXTERNALURL - Will open safari with the url provided in the tapEffectData attribute</li>
+	</ul>
+	
+	<p>Here's an example of a full bar in action:</p>
+	
+	<pre>
+&lt;chrome&gt;	
+	&lt;bar name=&quot;top chrome bar&quot; xoff=&quot;0&quot; yoff=&quot;-150&quot; xon=&quot;0&quot; yon=&quot;0&quot; width=&quot;768&quot; height=&quot;200&quot; swipeEnabled=&quot;y&quot; background=&quot;top_chrome_bar.png&quot;&gt;
+		&lt;togglebutton x=&quot;0&quot; y=&quot;150&quot; width=&quot;768&quot; height=&quot;50&quot; up=&quot;open_arrow.png&quot; down=&quot;close_arrow.png&quot; /&gt;
+		&lt;scrubber x=&quot;20&quot; y=&quot;40&quot; width=&quot;728&quot; height=&quot;80&quot; padding=&quot;4&quot; centrePages=&quot;y&quot; /&gt;
+			
+		&lt;button x=&quot;20&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;20&quot; up=&quot;close_issue.png&quot; down=&quot;&quot; pageSection=&quot;&quot; tapEffectType=&quot;TAP_CLOSEISSUE&quot; tapEffectData=&quot;&quot; /&gt;
+		&lt;button x=&quot;200&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;20&quot; up=&quot;home_up.png&quot; down=&quot;home_down.png&quot; pageSection=&quot;Home&quot; tapEffectType=&quot;TAP_JUMPTOSECTION&quot; tapEffectData=&quot;Home&quot; /&gt;
+		&lt;button x=&quot;320&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;20&quot; up=&quot;new_up.png&quot; down=&quot;new_down.png&quot; pageSection=&quot;New&quot; tapEffectType=&quot;TAP_JUMPTOSECTION&quot; tapEffectData=&quot;New&quot; /&gt;
+		&lt;button x=&quot;440&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;20&quot; up=&quot;next_up.png&quot; down=&quot;next_down.png&quot; pageSection=&quot;Next&quot; tapEffectType=&quot;TAP_JUMPTOSECTION&quot; tapEffectData=&quot;Next&quot; /&gt;
+		&lt;button x=&quot;648&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;20&quot; up=&quot;toc.png&quot; down=&quot;&quot; pageSection=&quot;&quot; tapEffectType=&quot;TAP_TOC&quot; tapEffectData=&quot;&quot; /&gt;
+	&lt;/bar&gt;
+&lt;/chrome&gt;</pre>
+					
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.chrome.about.html">&#9664; What is a chrome?</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.chrome.html">Up: Creating a chrome</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.chrome.renditions.html">Chrome renditions &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

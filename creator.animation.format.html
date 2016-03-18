@@ -1,0 +1,49 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Animation Scripts – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Animation Scripts</h1>		<p>Animation scripts have a precise, XML-based file format. There is no tool for editing them at this time, so you'll need to edit the XML by hand in your preferred text editor. While this isn't much fun, the results that can be obtained make it worth while!</p>
+	<p>Before we start, there are some key terms you need to know:</p>
+	
+	<ul>
+		<li>Alpha - the opacity of a layere, where 1 is 100% opaque and 0 is 0% opaque. Can be partial values, such as 0.5</li>
+		
+		<li>Angle - the rotation of a layer on the page, expressed in degrees, where 0 its its normal rotation and 90 is rotated 90 degrees clockwise.</li>
+		
+		<li>Animation - one or more timed movements.</li>
+		<li>Curve - how movement accelerates and decelerates. Can be one of "start", "end", "both" and "linear".</li>
+				
+		<li>Delay - the number of seconds an animation will pause before playing.</li>
+		
+		<li>Duration - the number of seconds an animation takes to happen. Can be partial values.</li>
+		
+		<li>Layer - a single movement inside an animation.</li>
+		<li>Scale - the size of a layer on the page, where 1 is 1x its normal size (100%) and 5 is 5x its normal size (500%). Can be partial values.</li>
+		<li>Sequence - chained animations that run in a particular order.</li>
+		<li>X/Y - the position of a layer on the page.</li>
+	</ul>
+	
+	<p>Each animation can contain multiple layer movements, all of which will execute with the same duration and delay.</p>
+	<p>Each layer movement can affect multiple layers on the page, either because you specified multiple layer names or because several layers have the same name.</p>
+	<p>All transformations are drawn on the device's graphics card, which is incredibly fast - this allows you to do some fairly advanced effects without worrying about performance.</p>
+	<p>All values specify where you want a layer to end up, rather than where it's coming from. So, if a layer has scale 2 and you set it to have scale 1, it will scale down; if it has scale 0 then it will scale up. Don't worry about where it is, just specify where you want it to be.</p>
+	<p>The secret to creating animations is that you only need specify the values you want to change. For example, if you want to make a layer fade out, set its alpha to be 0 - you don't need to set its X, Y, angle or scale values, because they aren't changing.</p>
+	
+				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.animation.html">&#9664; Animation</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.animation.html">Up: Animation</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.animation.format.xandy.html">Working with X and Y &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		

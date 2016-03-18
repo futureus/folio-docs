@@ -1,0 +1,93 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 	
+	<title>Particle Effects – FutureFolio documentation</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+	</head>
+
+	<body>
+		<div class="container">	<h1>Particle Effects</h1>		<p>FutureFolio can create special effects commonly seen in video games, such as fire, smoke, fog, steam, rain and snow. These effects are called particle effects, because the special effects system is made up of hundreds (or perhaps even thousands) of tiny particles that move around the page in a way that, combined, looks like the effect you're trying to produce.</p>
+	<p>Particles are immensely powerful, which means there's a learning curve required to take full advantage of them. You have complete control over how the particles behave, which means it's possible to create your own custom effects very easily.</p>
+	<p>The best way to create particles in Creator is to use the Particle Effects editor window, which is located under the page editor – tap the <strong>Effects</strong> button then choose Particle Effects.</p>
+	<p>Below is a description of what the various controls do. Any value marked "range" allows you to specify a range of values (for example, a Red value of 128 and a Red Variation value of 10 means that any red value between 108 and 138 can be used).</p>
+	
+	<ul>
+		<li>X - the horizontal position where the particle system should be created.</li>
+		<li>Y - the vertical position where the particle system should be created.</li>
+		<li>Width - the width of the particle system; this is not used if you choose Line shape.</li>
+		<li>Height - the height of the particle system; this is not used if you choose Line shape.</li>
+		<li>Shape - whether particles should be created from a single point, a rectangle or a line.</li>
+		<li>Mode - "normal" mode will show overlapping particles with no special blending; "additive" will increase the brightness of overlapping particles that have have an alpha value below 1.</li>
+		<li>Birth Rate - how many particles to create every second. Try to keep this as low as possible.</li>
+		<li>Lifetime - how long in seconds the particle system should continue to make particles.</li>
+	
+		<li>Particle Lifetime - how long in seconds each particle should live</li>
+		<li>Particle Lifetime Range - how long in seconds to vary the length of each particle's life</li>
+		<li>Images - a collection of images to use for your particles; one of these will be randomly chosen for each particle.</li>
+		<li>Container Layer - if specified, particles will be created inside this layer on your page; this allows you to control their exact position above or below other layers.</li>
+		
+		<li>Red - the starting red colour of each particle, specified as 0-255 (0 = no red; 255 = max red)</li>
+		<li>Green - the starting green colour of each particle</li>
+		
+		<li>Blue - the starting blue colour of each particle</li>
+		<li>Alpha - the starting alpha value of each particle (0 = transparent; 255 = fully opaque)</li>
+		<li>Red Range - the amount that the red colour should vary from particle to particle</li>
+		<li>Green Range - the amount that the blue colour should vary</li>
+		
+		<li>Blue Range - the amount that the blue colour should vary</li>
+		<li>Alpha Range - the amount that the blue colour should vary (negative alpha values and alpha values over 255.0 are forced into the range 0.0 - 255.0.)</li>
+		<li>Alpha Speed - the amount that the alpha value of each particle should change over its lifetime. This should be specified as a value between -255 and 255. See below for details.</li>
+		<li>Velocity - how fast each particle should move</li>
+		<li>Velocity Range - the amount the speed should vary from particle to particle</li>
+		<li>Horizontal Acceleration - how much the horizontal speed should change over time (see below for details)</li>
+		<li>Vertical Acceleration - how much the vertical speed should change over time (see below for details)</li>
+		<li>Direction - the direction, in degrees, to create particles, where 0 is directly upwards and 90 is 90 degrees to the right.</li>
+		<li>Direction Range - the amount of varation of particle creation direction, in degrees; a value of 90 will create a 90-degree cone around your direction.</li>
+		<li>Spin - the number of rotations each particle should perform over its life time; specify negative values for anti-clockwise rotation.</li>
+		<li>Spin Range - the amount to vary the spin value from particle to particle</li>
+		<li>Scale - how large each particle should be created; the default is 1, which means its normal size.</li>
+		<li>Scale Range - how much to vary the size of each particle.</li>
+		<li>Scale Speed - how much to modify each particle's scale over its lifetime.</li>
+	</ul>
+	
+	<p>When you've created your particle system, enter a filename into the box in the bottom-left corner of the screen, and tap <strong>Save</strong>. You can also load a pre-saved particle system for editing by tapping the <strong>Load a Saved Effect</strong> button.</p>
+	
+	<div class="caution">
+		<h2>Alpha Speed</h2>
+		<p>This value affects how your particles change their alpha value during their lifetime. If, for example, your particle is created with an alpha of 128 (50% transparent), setting an alpha speed of -128 will make the article fade out to be invisible as it ages.</p>
+	</div>
+	
+	<p>Before you use your particle system, we recommend you tap <strong>Preview</strong> to ensure that it looks and works as you intended.</p>
+	<p>Once your particle system has been created, you can create it using the "Create Particles" behaviour and specifying your particle filename as the behaviour's parameter.</p>
+	
+	<p>If you wish to have one particle image be used more than the others, simply specify it more times. For example, adding Image1 three times and Image2 once will cause Image1 to be used 75% of the time.</p>
+	
+	<div class="caution">
+		<h2>Particle performance</h2>
+		<p>Particle effects are rendered on the device's graphics card, which means they are very fast. However, there are three exceptions:</p>
+		
+		<ol>
+			<li>Having a high birth rate and/or having large particle graphics.</li>
+			<li>Using multiple particle systems on a page, or on adjacent pages.</li>
+			
+			<li>Running in the iOS Simulator.</li>
+			
+		</ol>
+		
+		<p>We strongly recommend you avoid using multiple particle systems on adjacent pages - leave at least a one-page gap between particle systems to ensure they all run at maximum speed.</p>
+		<p>Although the iOS Simulator does a very good job of simulator a real iPad, particle systems run <em>slower</em> in the virtual iPad than they do in a real iPad.</p>
+	</div>
+ 				
+				<table width="100%" style="margin-top: 30px; margin-bottom: 10px;">
+					<tr>
+					<td width="33%" style="text-align: left; padding-left: 30px;"><a href="creator.techniques.youtube.html">&#9664; Playing YouTube videos</a></td>
+					<td width="33%" style="text-align: center;"><a href="creator.techniques.html">Up: Advanced Techniques</a></td>
+					<td width="33%" style="text-align: right; padding-right: 30px;"><a href="creator.techniques.dynamicmovement.html">Dynamic movement &#9658;</a></td>
+					</tr>
+				</table>			
+		</div>
+			
+			<br /><br /><br /><div style="text-align: center; font-size: 80%; color: #AAAAAA;">This documentation is for Future internal use only and may not be disclosed to anyone unless they are under NDA.<br />If you have any questions, please email <a href="mailto:legal@futurenet.com" style="color: white;">legal@futurenet.com</a>.<br /><br /><img src="future-logo.png" /><br /><br /></div>
+	</body>
+</html>
+		
